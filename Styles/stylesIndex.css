@@ -1,0 +1,48 @@
+body {
+    background-image: url("../assets/images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#landingImg {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align:center;
+    text-shadow: 5px 5px 5px #3f51b5;
+    color:white;
+    font-family:sans-serif;
+    font-size:50px;
+}
+
+a {
+    display:flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#playbtn {
+    color: #0a526d;
+    background-color: #ffaae8;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+#playbtn:hover {
+    color: #ffaae8;
+    background-color: #3f51b5;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
