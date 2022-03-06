@@ -1,4 +1,6 @@
 
+   *{box-sizing: border-box}
+   
    body {
     background-image: url("../assets/images/background.jpg");
     background-position: center;
