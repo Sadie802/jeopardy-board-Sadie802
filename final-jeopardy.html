@@ -4,9 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/finalstyle.css" >
   <title>Final Jeopardy</title>
 </head>
 <body>
   <h1>Final Jeopardy</h1>
+  <h4>Players Turn:</h4>
+  <!--Final category and question grid-->
+  <div class="finalGrid">
+    <div id="finalCategory">Final Category</div>
+    <div id="finalQ">Final Question</div>
+  </div>
+  <!--Bet input, Guess input, and "lock in" button-->
+<section>
+  <div class="bet">
+    <input type="text" id="playerWager" placeholder="How much would you like to wager?" name="wager">
+    <input type="text" id="playerGuess" placeholder="What is..." name="guess">
+    <button id="submitAnswer" type="button" disabled>Lock in final answer and wager</button>
+  </div>
+</section>
+<footer id="container">
+  <p>© 2022 Sadie Southworth. Animal Jeopardy. All rights reserved.</p>
+</footer>
 </body>
 </html>

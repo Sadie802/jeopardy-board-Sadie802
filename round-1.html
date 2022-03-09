@@ -4,9 +4,81 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Styles/roundsstyles.css">
   <title>Jeopardy</title>
 </head>
 <body>
   <h1>Round One</h1>
+  <h4 id="playerTurn"></h4>
+  <div class="page-container">
+    <!-- Grid Container -->
+      <div class="container">
+          <!-- Categories -->
+        <div class="category"></div>
+        <div class="category"></div>
+        <div class="category"></div>
+        <div class="category"></div>
+        <div class="category"></div>
+        <div class="category"></div>
+
+        <!-- Clue Cards -->
+        <div class="clue-card col-1">$100</div>
+        <div class="clue-card col-2">$100</div>
+        <div class="clue-card col-3">$100</div>
+        <div class="clue-card col-4">$100</div>
+        <div class="clue-card col-5">$100</div>
+        <div class="clue-card col-6">$100</div>
+
+        <div class="clue-card col-1">$200</div>
+        <div class="clue-card col-2">$200</div>
+        <div class="clue-card col-3">$200</div>
+        <div class="clue-card col-4">$200</div>
+        <div class="clue-card col-5">$200</div>
+        <div class="clue-card col-6">$200</div>
+
+        <div class="clue-card col-1">$300</div>
+        <div class="clue-card col-2">$300</div>
+        <div class="clue-card col-3">$300</div>
+        <div class="clue-card col-4">$300</div>
+        <div class="clue-card col-5">$300</div>
+        <div class="clue-card col-6">$300</div>
+
+        <div class="clue-card col-1">$400</div>
+        <div class="clue-card col-2">$400</div>
+        <div class="clue-card col-3">$400</div>
+        <div class="clue-card col-4">$400</div>
+        <div class="clue-card col-5">$400</div>
+        <div class="clue-card col-6">$400</div>
+
+        <div class="clue-card col-1">$500</div>
+        <div class="clue-card col-2">$500</div>
+        <div class="clue-card col-3">$500</div>
+        <div class="clue-card col-4">$500</div>
+        <div class="clue-card col-5">$500</div>
+        <div class="clue-card col-6">$500</div>
+      </div>
+  <section>
+    <!--Guess input and options to submit guess or pass-->
+    <div class="guess">
+      <input type="text" id="playerGuess" placeholder="What is..." name="guess">
+      <button id="submit" type="submit">Submit Guess</button>
+      <button id="pass" type="button">Pass</button>
+    </div>
+    <!--Score/point tracker-->
+    <div class="wrapper">
+      <p>Player 1 Score:</p>
+      <p>Player 2 Score:</p>
+    </div>
+  </section>
+  <!--Link to next round-->
+  <a href="round-2.html">
+    <button id="nextRound">Next Round</button>
+  </a>
+  <footer id="container">
+    <p>© 2022 Sadie Southworth. Animal Jeopardy. All rights reserved.</p>
+  </footer>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+
