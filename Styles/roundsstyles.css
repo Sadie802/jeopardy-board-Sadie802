@@ -65,13 +65,13 @@ section {
     width:100vw
 }
 
-.guess {
-    position: absolute;
-    top: 25px;
-    display: grid;
+/* .guess {
+    /* position: absolute;
+    top: 25px; */
+    /* display: grid;
     justify-content: center;
-    left: 43%;
-}
+    left: 43%; 
+} */
 
 #playerGuess {
     font-size: 20px;
@@ -85,23 +85,23 @@ section {
 }
 
 #submit {
-    position: absolute;
-    top: 40px;
+    /* position: absolute;
+    top: 40px; */
     font-size: 20px;
     background: #c5e0e0;
     border-radius: 10px;
 }
 
 #submit:hover {
-    position: absolute;
-    top: 40px;
+    /* position: absolute;
+    top: 40px; */
     font-size: 18px;
     background: #c5e0e0;
     border-radius: 10px;
 }
 #pass {
-    position: absolute;
-    top: 40px;
+    /* position: absolute;
+    top: 40px; */
     left: 150px;
     position: absolute;
     top: 40px;
@@ -112,10 +112,10 @@ section {
 
 #pass:hover {
     font-size: 18px;
-    position: absolute;
+    /* position: absolute;
     top: 40px;
     left: 150px;
-    position: absolute;
+    position: absolute; */
     top: 40px;
     background: #c5e0e0;
     border-radius: 10px;

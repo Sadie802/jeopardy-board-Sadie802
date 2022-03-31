@@ -59,15 +59,15 @@
       </div>
   <section>
     <!--Guess input and options to submit guess or pass-->
-    <div class="guess">
+    <form class="guess" id="submit">
       <input type="text" id="playerGuess" placeholder="What is..." name="guess">
-      <button id="submit" type="submit">Submit Guess</button>
+      <button  id='submitBtn' type="submit">Submit Guess</button>
       <button id="pass" type="button">Pass</button>
-    </div>
+    </form>
     <!--Score/point tracker-->
     <div class="wrapper">
-      <p>Player 1 Score:</p>
-      <p>Player 2 Score:</p>
+      <p id="pOneScore">Player 1 Score:</p>
+      <p id="pTwoScore">Player 2 Score:</p>
     </div>
   </section>
   <!--Link to next round-->
