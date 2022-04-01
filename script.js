@@ -17,7 +17,8 @@ let pTwoScore = document.getElementById("pTwoScore")
 
 let cardAnswer;
 let initialValue;
-let startText
+let cardClicked;
+let cardClickedStatus;
 
 //creating player Objects
 let playerOne = {
@@ -158,6 +159,8 @@ async function playRound() {
     if (colOne[i]) {
       colOne[i].addEventListener("click", (e) => {
         e.preventDefault();
+        cardClicked = e.target
+        cardClickedStatus = true
         initialValue = colOne[i].textContent
         colOne[i].textContent = natureQA[i][0];
         submitBtn.disabled = false;
@@ -169,6 +172,7 @@ async function playRound() {
     if (colTwo[i]) {
       colTwo[i].addEventListener("click", (e) => {
         e.preventDefault();
+        cardClicked = e.target
         initialValue = colTwo[i].textContent
         colTwo[i].textContent = animalsQA[i][0];
         submitBtn.disabled = false;
@@ -180,6 +184,7 @@ async function playRound() {
     if (colThree[i]) {
       colThree[i].addEventListener("click", (e) => {
         e.preventDefault();
+        cardClicked = e.target
         initialValue = colThree[i].textContent
         colThree[i].textContent = computersQA[i][0];
         submitBtn.disabled = false;
@@ -191,6 +196,7 @@ async function playRound() {
     if (colFour[i]) {
       colFour[i].addEventListener("click", (e) => {
         e.preventDefault();
+        cardClicked = e.target
         initialValue = colFour[i].textContent
         colFour[i].textContent = mythologyQA[i][0];
         submitBtn.disabled = false;
@@ -202,6 +208,7 @@ async function playRound() {
     if (colFive[i]) {
       colFive[i].addEventListener("click", (e) => {
         e.preventDefault();
+        cardClicked = e.target
         initialValue = colFive[i].textContent
         colFive[i].textContent = historyQA[i][0];
         submitBtn.disabled = false;
@@ -213,6 +220,7 @@ async function playRound() {
     if (colSix[i]) {
       colSix[i].addEventListener("click", (e) => {
         e.preventDefault();
+        cardClicked = e.target
         initialValue = colSix[i].textContent
         colSix[i].textContent = generalQA[i][0];
         submitBtn.disabled = false;
@@ -243,6 +251,7 @@ async function playRound() {
           playerOne.points += initialValue
           pOneScore.textContent = `Player 1 Score: ${playerOne.points}`
         alert(`Correct! ${initialValue} has been added to your score`);
+        closeCard()
       } else {
         alert("WRONG");
       } 
@@ -250,10 +259,13 @@ async function playRound() {
           playerTwo.points += initialValue
           pTwoScore.textContent = `Player 2 Score: ${playerTwo.points}`
           alert(`Correct! ${initialValue} has been added to your score`)
-      } else {
-        alert('WRONG')
       }
     });
+  }
+
+  function closeCard(){
+    submit.guess.value = ""
+    cardClicked.textContent = ""
   }
 }
 playRound();
