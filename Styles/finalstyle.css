@@ -1,3 +1,4 @@
+/*-------------------------FINAL ROUND STYLING----------------------*/
 body {
     background-image: url("../assets/images/background.jpg");
     background-position: center;
@@ -5,9 +6,9 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden;
-    margin:0px;
 }
 
+/* Styling final round heading */
 h1 {   
     text-align:center;
     text-shadow: 5px 5px 5px #3f51b5;
@@ -17,6 +18,7 @@ h1 {
     margin:0px;
 }
 
+/* Player's turn heading */
 h4 {
     text-align: center;
     text-shadow: 2px 2px 2px #607d8b;
@@ -25,6 +27,7 @@ h4 {
     font-size: 25px;
 }
 
+/* Creating 1x1 grid */
 .finalGrid {
     position: relative;
     display: grid;
@@ -36,6 +39,8 @@ h4 {
     margin-right: 20%;
     margin-bottom: 10px;
 }
+
+/* Category styling */
 #finalCategory {
     background: darkcyan;
     display: flex;
@@ -45,6 +50,7 @@ h4 {
     height: 90px;
 }
 
+/* Question box styling */
 #finalQ {
     background: blue;
     color: yellow;
@@ -55,6 +61,7 @@ h4 {
     height: 320px;
 }
 
+/* Guess input/submit button styling */
 section {
     position: relative;
     width: 100%;
@@ -88,6 +95,7 @@ section {
     color: white;
     background-color: #cb1111;
 }
+/*------^---------^-------*/
 
 footer {
     position: fixed;

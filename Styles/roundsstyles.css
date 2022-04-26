@@ -1,144 +1,149 @@
+/*----------ROUND 1 & ROUND 2 STYLING----------*/
+body {
+  background-image: url("../assets/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
 
-   *{box-sizing: border-box}
-   
-   body {
-    background-image: url("../assets/images/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    overflow: hidden;
-   }
-
-
+/* Creating 6x6 grid to hold categories and questions */
 .container {
-    position:relative;
-    display:grid;
-    grid-template-columns: repeat(6,1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    background:darkblue;
-    justify-content:center;
-    height:50vh;
-    margin-top: 0px;
-    margin-left: 90px;
-    margin-right: 90px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  background: darkblue;
+  justify-content: center;
+  height: 50vh;
+  margin-top: 0px;
+  margin-left: 90px;
+  margin-right: 90px;
 }
 
+/* Styling category boxes */
 .category {
-    background: darkcyan;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:25px;
-
+  background: darkcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
 
+/* Styling clue card boxes */
 .clue-card {
-    background: blue;
-    color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:35px;
+  background: blue;
+  color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
 }
 
-h1 {   
-    text-align:center;
-    text-shadow: 5px 5px 5px #3f51b5;
-    color:white;
-    font-family:sans-serif;
-    font-size:50px;
-    margin:0px;
+/* Round heading styling */
+h1 {
+  text-align: center;
+  text-shadow: 5px 5px 5px #3f51b5;
+  color: white;
+  font-family: sans-serif;
+  font-size: 50px;
+  margin: 0px;
 }
 
+/* 'players turn' heading styling */
 h4 {
-    text-align: center;
-    text-shadow: 2px 2px 2px #607d8b;
-    color: white;
-    font-family: sans-serif;
-    font-size: 25px;
+  text-align: center;
+  text-shadow: 2px 2px 2px #607d8b;
+  color: white;
+  font-family: sans-serif;
+  font-size: 25px;
 }
 
+/* Guess input, submit + pass button, and player score styling */
 section {
-    position:relative;
-    width:100vw
+  position: relative;
+  width: 100vw;
 }
 
-/* .guess {
-    /* position: absolute;
-    top: 25px; */
-    /* display: grid;
-    justify-content: center;
-    left: 43%; 
-} */
+.guess {
+  position: absolute;
+  top: 25px;
+  display: grid;
+  justify-content: center;
+  left: 43%;
+}
 
 #playerGuess {
-    font-size: 20px;
+  font-size: 20px;
 }
 
-.wrapper{
-    display: flex;
-    justify-content: space-around;
-    height: 170px;
-    align-items: flex-end;
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  height: 170px;
+  align-items: flex-end;
 }
 
 #submit {
-    /* position: absolute;
-    top: 40px; */
-    font-size: 20px;
-    background: #c5e0e0;
-    border-radius: 10px;
+  position: absolute;
+  top: 40px;
+  font-size: 20px;
+  background: #c5e0e0;
+  border-radius: 10px;
 }
 
 #submit:hover {
-    /* position: absolute;
-    top: 40px; */
-    font-size: 18px;
-    background: #c5e0e0;
-    border-radius: 10px;
+  position: absolute;
+  top: 40px;
+  font-size: 18px;
+  background: #c5e0e0;
+  border-radius: 10px;
 }
+
 #pass {
-    /* position: absolute;
-    top: 40px; */
-    left: 150px;
-    position: absolute;
-    top: 40px;
-    font-size: 20px;
-    background: #c5e0e0;
-    border-radius: 10px;
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  position: absolute;
+  top: 40px;
+  font-size: 20px;
+  background: #c5e0e0;
+  border-radius: 10px;
 }
 
 #pass:hover {
-    font-size: 18px;
-    /* position: absolute;
-    top: 40px;
-    left: 150px;
-    position: absolute; */
-    top: 40px;
-    background: #c5e0e0;
-    border-radius: 10px;
+  font-size: 18px;
+  position: absolute;
+  top: 40px;
+  left: 150px;
+  position: absolute;
+  top: 40px;
+  background: #c5e0e0;
+  border-radius: 10px;
 }
+
+/* player score stlying */
+div > p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* next round button styling */
+a {
+  background: #3d998a;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 10px;
+  float: right;
+}
+/*----^-----^-----^----*/
 
 footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
 }
-
-div > p {
-    font-weight: bold;
-    font-size: 20px;
-}
-
-a{
-    background: #3D998A;
-    color: #ffffff;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px;
-    float: right;
-}
-

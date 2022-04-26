@@ -18,7 +18,6 @@ let pTwoScore = document.getElementById("pTwoScore")
 let cardAnswer;
 let initialValue;
 let cardClicked;
-let cardClickedStatus;
 
 //creating player Objects
 let playerOne = {
@@ -36,7 +35,7 @@ let playerTwo = {
 //function for playing each round
 async function playRound() {
   //import questions and categories
-  let response = await fetch(`data/placeholder-questions.json`);
+  let response = await fetch(`/assets/data/placeholder-questions.json`);
   let placeHolder = await response.json();
   placeHolder = placeHolder.placeholderQuestions;
 
@@ -70,7 +69,6 @@ async function playRound() {
   for (let i = 20; i < 30; i++) {
     computers.push(placeHolder[i].question + ":" + placeHolder[i].answer);
   }
-
   let mythology = [];
   for (let i = 30; i < 40; i++) {
     mythology.push(placeHolder[i].question + ":" + placeHolder[i].answer);
@@ -160,25 +158,24 @@ async function playRound() {
       colOne[i].addEventListener("click", (e) => {
         e.preventDefault();
         cardClicked = e.target
-        cardClickedStatus = true
         initialValue = colOne[i].textContent
         colOne[i].textContent = natureQA[i][0];
         submitBtn.disabled = false;
         passBtn.disabled = false;
         cardAnswer = natureQA[i][1].toLowerCase();
-        guessing();
+        console.log(cardClicked)
+       guessing()
       });
     }
     if (colTwo[i]) {
       colTwo[i].addEventListener("click", (e) => {
         e.preventDefault();
-        cardClicked = e.target
         initialValue = colTwo[i].textContent
         colTwo[i].textContent = animalsQA[i][0];
         submitBtn.disabled = false;
         passBtn.disabled = false;
         cardAnswer = animalsQA[i][1].toLowerCase();
-        guessing();
+       
       });
     }
     if (colThree[i]) {
@@ -202,7 +199,7 @@ async function playRound() {
         submitBtn.disabled = false;
         passBtn.disabled = false;
         cardAnswer = mythologyQA[i][1].toLowerCase();
-        guessing();
+       
       });
     }
     if (colFive[i]) {
@@ -214,7 +211,7 @@ async function playRound() {
         submitBtn.disabled = false;
         passBtn.disabled = false;
         cardAnswer = historyQA[i][1].toLowerCase();
-        guessing();
+       
       });
     }
     if (colSix[i]) {
@@ -226,7 +223,7 @@ async function playRound() {
         submitBtn.disabled = false;
         passBtn.disabled = false;
         cardAnswer = generalQA[i][1].toLowerCase();
-        guessing();
+        
       });
     }
   }
@@ -247,23 +244,28 @@ async function playRound() {
   function guessing() {
     submit.addEventListener("submit", (e) => {
       e.preventDefault();
+      console.log(cardAnswer)
       if (playerOne.turn === true && submit.guess.value === cardAnswer) {
           playerOne.points += initialValue
           pOneScore.textContent = `Player 1 Score: ${playerOne.points}`
         alert(`Correct! ${initialValue} has been added to your score`);
         closeCard()
-      } else {
-        alert("WRONG");
-      } 
-      if (playerTwo.turn === true && submit.guess.value === cardAnswer) {
+      } else if (playerTwo.turn === true && submit.guess.value === cardAnswer) {
           playerTwo.points += initialValue
           pTwoScore.textContent = `Player 2 Score: ${playerTwo.points}`
           alert(`Correct! ${initialValue} has been added to your score`)
+      } else if (playerOne.turn === true && submit.guess.value !== cardAnswer){
+        alert('Wrong.... whore..')
+        console.log(alert)
+      } else if (playerTwo.turn === true && submit.guess.value !== cardAnswer){
+        alert('Wrong.... whore')
+        console.log(alert)
       }
     });
   }
 
   function closeCard(){
+    cardClicked === false
     submit.guess.value = ""
     cardClicked.textContent = ""
   }

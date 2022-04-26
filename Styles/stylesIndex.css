@@ -1,3 +1,4 @@
+/*------------LANDING PAGE (INDEX) STYLING------------*/
 body {
     background-image: url("../assets/images/background.jpg");
     background-position: center;
@@ -7,11 +8,13 @@ body {
     overflow: hidden;
 }
 
+/* Centering image */
 #landingImg {
     display: flex;
     justify-content: center;
 }
 
+/* Heading stlying */
 h1 {
     text-align:center;
     text-shadow: 5px 5px 5px #3f51b5;
@@ -20,6 +23,7 @@ h1 {
     font-size:50px;
 }
 
+/* Stlying 'start game' button */
 a {
     display:flex;
     justify-content: center;
@@ -39,6 +43,7 @@ a {
     font-size: 30px;
     border-radius: 10px;
 }
+/*-----^------^--------*/
 
 footer {
     position: fixed;
